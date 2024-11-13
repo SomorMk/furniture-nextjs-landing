@@ -14,12 +14,12 @@ const Navbar = () => {
 
     // Function to handle the scroll event
     const handleScroll = () => {
-        window.scrollY > 10 ? setNavBg(true) : setNavBg(false)
+        scrollY > 10 ? setNavBg(true) : setNavBg(false)
     };
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-    }, [window.scrollY]);
+    }, []);
 
     return (
         <nav className={`fixed top-0 left-0 w-full z-10 py-[30px] duration-300 ${navBg && 'bg-white !py-4 border-b shadow-lg'}`}>
